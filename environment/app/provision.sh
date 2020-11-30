@@ -23,6 +23,8 @@ sudo apt-get install nginx -y
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
 
+sudo cp /home/config-files/reverse-proxy.conf /etc/nginx/conf.d/app.conf
+
 # start the jsnode app
 cd environment/app/
-pm2 start start app.jsx 
+pm2 start start app.jsx  
