@@ -26,5 +26,5 @@ sudo service nginx restart
 sudo cp /home/config-files/reverse-proxy.conf /etc/nginx/conf.d/app.conf
 
 # start the jsnode app
-cd environment/app/
-pm2 start start app.jsx  
+cd /home/ubuntu/app
+pm2 start app.js

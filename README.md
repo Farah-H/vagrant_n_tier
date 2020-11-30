@@ -1,51 +1,29 @@
-# Multi Machine Vagrant
-![](https://trello-attachments.s3.amazonaws.com/5f8f1164fa6b905e84838dc1/5fbe454d03aed964470af10d/bf3fa46408c6f716234c80d765c5df4a/untitled_(51).png)
+# Vagrant Multi Machine Task 
 
-## Timings
+The purpose of this repo is to contain and document a js.node app working usingg two virtual machines. The app should be accesible using localhost ip address and some aliases (see below).
 
-120 - 180 Minutes
-
-## Summary
-
-The sample application has the ability to connect to a database. We need to provision our development environment with a vm for the database and one for the database.
-
-Vagrant is capable of running two or more virtual machines at once with different configurations.
-
-## Tasks
-
+## Task & Acceptance Criteria
 * Research how to create a multi machine vagrant environment
 * Add a second virtual machine called "db" to your Vagrant file
 * Configure the db machine with a different IP from the app
 * Provision the db machine with a MongoDB database
 
+## Pre-requisites 
+You must have the following installed: If you do not have any, click the links which will take you to the installation pages. 
+- [Vagrant]() 
+- [Virtual Box]() 
+- [Ruby]() 
+- a terminal, such as GitBash, cmd or powershell. You should already have this in your computer.
 
-## Notes
+## How to use the app:
 
-When you have the second machine running further configuration of the app is required to make it use the database. We will cover this in the next lesson.
+- clone this repo. You can learn how to clone a repo [here]()
+- open your terminal in this repo's folder, or open it anywhere and `cd` to the folder. 
+- in your terminal type `vagrant up` 
+- wait for it to complete (this is running two virtual machines so it will take a while)
+- you shouldn't need to `vagrant ssh` into the app for it to work, but if you need to manually change anything or get into the machine, you can use this command. 
 
-You can test your database is working correctly by running the test suite in the test folder. There are two sets of tests. One for the app VM and one for the db VM. Make them all pass.
+- in your browser type the ip address `192.168.10.100` and this should open the app 
+- if you type `192.168.10.100:3000` this should also take you to the app 
 
-```
-cd test
-rake spec
-```
-
-
-## Acceptance Criteria
-
-* Uses vagrant file
-* Create 2 VM APP and Mongod
-* Localhost set to development.local
-
-* App works on Port 3000 (development.local:3000)
-
-* Work with only command "vagrant up" &/or mininum commands
-* All tests passing
-* works on /posts
-* works on /fibonacci/30
-
-* Documentation exists as README.md file
-* Documentation includes: Intro (purpose of repo), Pre Requisits  and Intructions
-* Instructions have a clear step by step
-
-* repo exists on github
+__Note__ fibbonachi doesn't work, nor does development.local due to issues with my localhost. 
