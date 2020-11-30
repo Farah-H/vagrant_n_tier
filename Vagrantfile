@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     db.vm.network "private_network", ip: "192.168.10.150"
     #db.hostsupdater.aliases = ["database.local"]
     # there are issues with m
-    db.vm.provision "shell", path: "environment/app/provision.sh", privileged: false
+    db.vm.provision "shell", path: "environment/db/provision.sh", privileged: false
   end
 
   config.vm.define "app" do |app|
@@ -19,7 +19,6 @@ Vagrant.configure("2") do |config|
     app.vm.network "private_network", ip: "192.168.10.100"
     #app.hostsupdater.aliases = ["development.local"]
     app.vm.synced_folder "app", "/home/ubuntu/app"
-    app.vm.synced_folder "nginx.config", "/home/config-files"
     app.vm.provision "shell", path: "environment/app/provision.sh", privileged: false
   end
 
