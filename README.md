@@ -1,6 +1,6 @@
 # Vagrant Multi Machine Task 
 
-The purpose of this repo is to contain and document a js.node app working usingg two virtual machines. The app should be accesible using localhost ip address and some aliases (see below).
+The purpose of this repo is to contain and document a js.node app working usingg two virtual machines. The app should be accesible using localhost ip address and some aliases (see below). If the app is working you should see a page saying 'this app is working correctly' and the sparta logo.
 
 ## Task & Acceptance Criteria
 * Research how to create a multi machine vagrant environment
