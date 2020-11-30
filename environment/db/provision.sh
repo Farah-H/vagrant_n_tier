@@ -17,7 +17,6 @@ sudo apt-get install nodejs -y
 # install pm2
 sudo npm install pm2 -g
 
-# install nginx
 sudo apt-get install nginx -y
 
 # finally, restart the nginx service so the new config takes hold
@@ -25,4 +24,4 @@ sudo service nginx restart
 
 # start the jsnode app
 cd environment/app/
-pm2 start start app.jsx 
+pm2 start start app.js
